@@ -1,0 +1,82 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# FastAPI / Pydantic specific
+*.sqlite3
+*.db
+.env
+.env.*
+
+# Logs
+*.log
+*.out
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pytest
+.cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Docker
+*.pid
+*.tar
+*.gz
+*.log
+*.bak
+*.swp
+.dockerignore
+Dockerfile*
+
+# Coverage
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Gunicorn/Pid files
+gunicorn.pid
+
+# System files
+.DS_Store
+Thumbs.db
+

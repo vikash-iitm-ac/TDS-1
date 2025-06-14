@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  rag_generator:
+    build: .
+    container_name: rag_generator
+    ports:
+      - "8001:8001"
+    environment:
+      - OPENAI_API_KEY=your-openai-key
+      - PYTHONPATH=/app
+      - CHROMA_HOST=chroma
+      - CHROMA_PORT=8000
+      - CHROMA_COLLECTION=rag_data
+    volumes:
+      - chroma_data:/chroma_data
+    depends_on:
+      - chroma
+
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: chroma
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma_data:/chroma_data
+    environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma_data
+
+volumes:
+  chroma_data:
